@@ -1,0 +1,2323 @@
+/*
+	Template Name: IService
+	Description: Template for apple service
+	Author: kiko
+	Author URI: http://rigez.ru
+	Version:1.0
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic);
+/* line 5, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* ===== 1 FONTS ===== */
+/* Webfont: Lato-Black */
+@font-face {
+  font-family: 'LatoWebBlack';
+  src: url("../fonts/Lato-Black.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Black.woff2") format("woff2"), url("../fonts/Lato-Black.woff") format("woff"), url("../fonts/Lato-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-BlackItalic */
+@font-face {
+  font-family: 'LatoWebBlack';
+  src: url("../fonts/Lato-BlackItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-BlackItalic.woff2") format("woff2"), url("../fonts/Lato-BlackItalic.woff") format("woff"), url("../fonts/Lato-BlackItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Bold */
+@font-face {
+  font-family: 'LatoWebBold';
+  src: url("../fonts/Lato-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-BoldItalic */
+@font-face {
+  font-family: 'LatoWebBold';
+  src: url("../fonts/Lato-BoldItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-BoldItalic.woff2") format("woff2"), url("../fonts/Lato-BoldItalic.woff") format("woff"), url("../fonts/Lato-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Hairline */
+@font-face {
+  font-family: 'LatoWebHairline';
+  src: url("../fonts/Lato-Hairline.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Hairline.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Hairline.woff2") format("woff2"), url("../fonts/Lato-Hairline.woff") format("woff"), url("../fonts/Lato-Hairline.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-HairlineItalic */
+@font-face {
+  font-family: 'LatoWebHairline';
+  src: url("../fonts/Lato-HairlineItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-HairlineItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-HairlineItalic.woff2") format("woff2"), url("../fonts/Lato-HairlineItalic.woff") format("woff"), url("../fonts/Lato-HairlineItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Heavy */
+@font-face {
+  font-family: 'LatoWebHeavy';
+  src: url("../fonts/Lato-Heavy.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Heavy.woff2") format("woff2"), url("../fonts/Lato-Heavy.woff") format("woff"), url("../fonts/Lato-Heavy.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-HeavyItalic */
+@font-face {
+  font-family: 'LatoWebHeavy';
+  src: url("../fonts/Lato-HeavyItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-HeavyItalic.woff2") format("woff2"), url("../fonts/Lato-HeavyItalic.woff") format("woff"), url("../fonts/Lato-HeavyItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Italic */
+@font-face {
+  font-family: 'LatoWeb';
+  src: url("../fonts/Lato-Italic.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Italic.woff2") format("woff2"), url("../fonts/Lato-Italic.woff") format("woff"), url("../fonts/Lato-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Light */
+@font-face {
+  font-family: 'LatoWebLight';
+  src: url("../fonts/Lato-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff"), url("../fonts/Lato-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-LightItalic */
+@font-face {
+  font-family: 'LatoWebLight';
+  src: url("../fonts/Lato-LightItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-LightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-LightItalic.woff2") format("woff2"), url("../fonts/Lato-LightItalic.woff") format("woff"), url("../fonts/Lato-LightItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Medium */
+@font-face {
+  font-family: 'LatoWebMedium';
+  src: url("../fonts/Lato-Medium.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Medium.woff2") format("woff2"), url("../fonts/Lato-Medium.woff") format("woff"), url("../fonts/Lato-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-MediumItalic */
+@font-face {
+  font-family: 'LatoWebMedium';
+  src: url("../fonts/Lato-MediumItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-MediumItalic.woff2") format("woff2"), url("../fonts/Lato-MediumItalic.woff") format("woff"), url("../fonts/Lato-MediumItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Regular */
+@font-face {
+  font-family: 'LatoWeb';
+  src: url("../fonts/Lato-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Semibold */
+@font-face {
+  font-family: 'LatoWebSemibold';
+  src: url("../fonts/Lato-Semibold.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Semibold.woff2") format("woff2"), url("../fonts/Lato-Semibold.woff") format("woff"), url("../fonts/Lato-Semibold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-SemiboldItalic */
+@font-face {
+  font-family: 'LatoWebSemibold';
+  src: url("../fonts/Lato-SemiboldItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-SemiboldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-SemiboldItalic.woff2") format("woff2"), url("../fonts/Lato-SemiboldItalic.woff") format("woff"), url("../fonts/Lato-SemiboldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-Thin */
+@font-face {
+  font-family: 'LatoWebThin';
+  src: url("../fonts/Lato-Thin.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Thin.woff2") format("woff2"), url("../fonts/Lato-Thin.woff") format("woff"), url("../fonts/Lato-Thin.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: Lato-ThinItalic */
+@font-face {
+  font-family: 'LatoWebThin';
+  src: url("../fonts/Lato-ThinItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Lato-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-ThinItalic.woff2") format("woff2"), url("../fonts/Lato-ThinItalic.woff") format("woff"), url("../fonts/Lato-ThinItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'BookmanOldStyle';
+  src: url("../fonts/BookmanOldStyle.eot?#iefix") format("embedded-opentype"), url("../fonts/BookmanOldStyle.woff") format("woff"), url("../fonts/BookmanOldStyle.ttf") format("truetype"), url("../fonts/BookmanOldStyle.svg#BookmanOldStyle") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BookmanOldStyle-Bold';
+  src: url("../fonts/BookmanOldStyle-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/BookmanOldStyle-Bold.woff") format("woff"), url("../fonts/BookmanOldStyle-Bold.ttf") format("truetype"), url("../fonts/BookmanOldStyle-Bold.svg#BookmanOldStyle-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* ===== 2 GENERAL START ===== */
+/* ----- 2.1 General Style ----- */
+/* line 265, ../sass/screen.scss */
+body {
+  font-family: "LatoWeb";
+  font-size: 16px;
+  color: #2b2b2b;
+  background: #fff;
+  min-width: 940px;
+}
+
+/* line 273, ../sass/screen.scss */
+* {
+  min-height: 0px;
+}
+
+/* line 277, ../sass/screen.scss */
+a {
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+/* line 282, ../sass/screen.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 286, ../sass/screen.scss */
+:focus {
+  outline: none;
+}
+
+/* line 290, ../sass/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  font-family: "BookmanOldStyle", serif;
+  color: #2b2b2b;
+}
+
+/* line 299, ../sass/screen.scss */
+h1 {
+  font-size: 65px;
+  color: #343434;
+  text-transform: uppercase;
+}
+
+/* line 305, ../sass/screen.scss */
+h2 {
+  font-size: 15px;
+  color: #2b2b2b;
+}
+
+/* line 310, ../sass/screen.scss */
+h3 {
+  font-size: 14px;
+}
+
+/* line 314, ../sass/screen.scss */
+h4 {
+  font-size: 13px;
+}
+
+/* line 318, ../sass/screen.scss */
+h5 {
+  font-size: 12px;
+}
+
+/* line 322, ../sass/screen.scss */
+h6 {
+  font-size: 11px;
+}
+
+/* line 326, ../sass/screen.scss */
+ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 332, ../sass/screen.scss */
+ul li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 339, ../sass/screen.scss */
+input, textarea, select, button {
+  font-family: "LatoWeb";
+  font-size: 15px;
+  vertical-align: baseline;
+}
+
+/* line 345, ../sass/screen.scss */
+label {
+  vertical-align: baseline;
+}
+
+/* line 349, ../sass/screen.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 353, ../sass/screen.scss */
+a, input[type="submit"] {
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+/* line 359, ../sass/screen.scss */
+a:focus, a:hover, button:focus, button:hover, .btn:focus, input:focus, textarea:focus, select:focus {
+  outline: 0;
+}
+
+/* line 363, ../sass/screen.scss */
+p {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  font-family: "LatoWeb";
+}
+
+/* line 370, ../sass/screen.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 38, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ----- 2.2 Button ----- */
+/* line 377, ../sass/screen.scss */
+.wrapper {
+  margin: 0 auto;
+  width: 960px;
+}
+
+/* line 381, ../sass/screen.scss */
+a, input[type="submit"], img {
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+/* HEADER */
+/* line 387, ../sass/screen.scss */
+header {
+  height: 114px;
+  position: relative;
+  overflow: hidden;
+}
+/* line 392, ../sass/screen.scss */
+header a.hlogo {
+  margin: 25px 0 0 40px;
+  display: block;
+  background: url(../css/images/hlogo.png) no-repeat;
+  height: 62px;
+  width: 203px;
+}
+/* line 400, ../sass/screen.scss */
+header a.hlogo-center {
+  margin: 22px 0 0 0;
+  display: block;
+  background: url(../css/images/hlogo_center.png) no-repeat;
+  height: 65px;
+  width: 332px;
+  left: 329px;
+  position: absolute;
+  top: 0;
+}
+/* line 411, ../sass/screen.scss */
+header .right-info {
+  position: absolute;
+  right: 43px;
+  top: 22px;
+  line-height: 22px;
+  text-align: right;
+}
+/* line 419, ../sass/screen.scss */
+header .right-info a.telephone {
+  color: #f58474;
+  font-size: 23px;
+  font-family: "BookmanOldStyle", serif;
+}
+/* line 424, ../sass/screen.scss */
+header .right-info a.telephone span {
+  color: #53767a;
+}
+/* line 428, ../sass/screen.scss */
+header .right-info a.email-feedback {
+  color: #505050;
+  font-family: "OpenSans";
+  font-size: 17px;
+}
+/* line 434, ../sass/screen.scss */
+header .right-info a.order-call {
+  background: url(../css/images/bottom_order_call.png) no-repeat bottom center;
+  color: #53767a;
+  font-family: OpenSans, sans-serif;
+  font-size: 17px;
+  padding: 0 0 3px 0;
+}
+/* line 440, ../sass/screen.scss */
+header .right-info a.order-call:hover {
+  -moz-transition-delay: 0.6;
+  -o-transition-delay: 0.6;
+  -webkit-transition-delay: 0.6;
+  transition-delay: 0.6;
+}
+/* line 445, ../sass/screen.scss */
+header .right-info a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+/* ======================= */
+/* line 454, ../sass/screen.scss */
+.tab1 {
+  background: url(../css/images/bg_white.png) repeat-x top center, url(../css/images/shadow_left.png) no-repeat bottom left, url(../css/images/shadow_right.png) no-repeat bottom right, url(../css/images/shadow_repeat.png) repeat-x bottom center, #c4ceee;
+  height: 664px;
+}
+/* line 461, ../sass/screen.scss */
+.tab1 .tab-inner-image {
+  margin: 0 25px;
+  background: url(../css/images/tab1_lights.png) no-repeat center top, url(../css/images/tab1.jpg) no-repeat center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 641px;
+}
+/* line 468, ../sass/screen.scss */
+.tab1 .tab-inner-image .wrapper {
+  border-top: 3px solid #f47b6a;
+}
+/* line 471, ../sass/screen.scss */
+.tab1 .tab-inner-image .wrapper h1 {
+  text-align: center;
+  line-height: 67px;
+  padding: 56px 0 0 0;
+}
+/* line 476, ../sass/screen.scss */
+.tab1 .tab-inner-image .wrapper .heading-divider {
+  background: #c6a99f;
+  margin: 21px auto 0 auto;
+}
+/* line 481, ../sass/screen.scss */
+.tab1 .tab-inner-image .wrapper p.heading-description {
+  color: #070707;
+  font-size: 23px;
+  text-align: center;
+  margin: 22px 0 0 0;
+  font-family: "LatoWeb";
+}
+/* line 487, ../sass/screen.scss */
+.tab1 .tab-inner-image .wrapper p.heading-description span {
+  color: #ed1f24;
+}
+
+/* FORM */
+/* line 498, ../sass/screen.scss */
+.modal-cont input[type="tel"] {
+  margin: 10px 0 0 0 !important;
+}
+
+/* line 501, ../sass/screen.scss */
+.modal-cont input[type="email"] {
+  margin: 10px 0 !important;
+}
+
+/* line 504, ../sass/screen.scss */
+.modal-cont input[type="submit"] {
+  background: url(../css/images/btn_left.png) no-repeat left 0, url(../css/images/btn_right.png) no-repeat right 0, #f3f3f3 url(../css/images/btn_center.png) repeat-x;
+  height: 47px;
+  width: 248px;
+  display: block;
+  text-align: center;
+  line-height: 47px;
+  color: #fff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: "BookmanOldStyle-Bold";
+  text-shadow: 0 1px #bc5e51;
+  margin-top: 15px !important;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+/* line 522, ../sass/screen.scss */
+.modal-cont input[type="submit"]:hover {
+  opacity: 0.6;
+  background: url(../css/images/btn_left.png) no-repeat left 0, url(../css/images/btn_right.png) no-repeat right 0, #f3f3f3 url(../css/images/btn_center.png) repeat-x;
+}
+/* line 528, ../sass/screen.scss */
+.modal-cont input[type="submit"]:focus {
+  opacity: 0.8;
+  background: url(../css/images/btn_left.png) no-repeat left 0, url(../css/images/btn_right.png) no-repeat right 0, #f3f3f3 url(../css/images/btn_center.png) repeat-x;
+}
+
+/* line 536, ../sass/screen.scss */
+form {
+  padding: 25px;
+}
+/* line 64, input/*.png */
+form .input-sprite, form input[type="text"], form input[type="tel"],
+form input[type="email"], form input[type="text"]:hover, form input[type="tel"]:hover,
+form input[type="email"]:hover, form input[type="text"]:focus, form input[type="tel"]:focus,
+form input[type="email"]:focus {
+  background-image: url('images/sprites/input-sd7900c4cd4.png');
+  background-repeat: no-repeat;
+}
+/* line 539, ../sass/screen.scss */
+form input[type="text"], form input[type="tel"],
+form input[type="email"] {
+  padding: 0 25px;
+  background-position: 0 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 48px;
+  width: 248px;
+  border: 0;
+  outline: 0;
+  float: left;
+  color: #724119;
+  font-family: "LatoWeb";
+}
+/* line 59, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+form input[type="text"]:hover, form input[type="text"].input-hover, form input[type="tel"]:hover, form input[type="tel"].input-hover,
+form input[type="email"]:hover,
+form input[type="email"].input-hover {
+  background-position: 0 -96px;
+}
+/* line 551, ../sass/screen.scss */
+form input[type="text"]:hover, form input[type="tel"]:hover,
+form input[type="email"]:hover {
+  background-position: 0 -96px;
+}
+/* line 554, ../sass/screen.scss */
+form input[type="text"]:focus, form input[type="tel"]:focus,
+form input[type="email"]:focus {
+  background-position: 0 -48px;
+}
+/* line 61, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+form input[type="text"]:-moz-placeholder, form input[type="tel"]:-moz-placeholder,
+form input[type="email"]:-moz-placeholder {
+  color: #724119;
+  font-family: "LatoWeb";
+}
+/* line 64, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+form input[type="text"]::-moz-placeholder, form input[type="tel"]::-moz-placeholder,
+form input[type="email"]::-moz-placeholder {
+  color: #724119;
+  font-family: "LatoWeb";
+}
+/* line 67, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+form input[type="text"]:-ms-input-placeholder, form input[type="tel"]:-ms-input-placeholder,
+form input[type="email"]:-ms-input-placeholder {
+  color: #724119;
+  font-family: "LatoWeb";
+}
+/* line 56, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+form input[type="text"]::-webkit-input-placeholder, form input[type="tel"]::-webkit-input-placeholder,
+form input[type="email"]::-webkit-input-placeholder {
+  color: #724119;
+  font-family: "LatoWeb";
+}
+/* line 564, ../sass/screen.scss */
+form input[type="tel"] {
+  margin: 0 15px;
+}
+/* line 64, submit/*.png */
+form .submit-sprite, form input[type="submit"] {
+  background-image: url('images/sprites/submit-sb7db498a43.png');
+  background-repeat: no-repeat;
+}
+/* line 569, ../sass/screen.scss */
+form input[type="submit"] {
+  background-position: 0 0;
+  width: 246px;
+  height: 47px;
+  font-size: 16px;
+  color: #fff;
+  font-family: "BookmanOldStyle-Bold", serif;
+  text-align: center;
+  line-height: 47px;
+  cursor: pointer;
+  text-shadow: 0 1px #bc5e51;
+  border: 0;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 582, ../sass/screen.scss */
+form input[type="submit"]:hover {
+  opacity: 0.7;
+  /*@include submit-sprite(submit_1hover);*/
+}
+/* line 588, ../sass/screen.scss */
+form input[type="submit"]:focus {
+  opacity: 0.7;
+  /*@include submit-sprite(submit_click);*/
+}
+
+/* ICONS */
+/* line 72, icons/*.png */
+.icons-sprite, .bird, .love, .boots, .clothes {
+  background-image: url('images/sprites/icons-s6fc9ebe192.png');
+  background-repeat: no-repeat;
+}
+
+/* line 598, ../sass/screen.scss */
+.bird {
+  background-position: 0 0;
+  width: 87px;
+  height: 55px;
+  position: absolute;
+  top: 155px;
+  right: 113px;
+}
+
+/* line 606, ../sass/screen.scss */
+.love {
+  background-position: 0 -154px;
+  height: 52px;
+  width: 103px;
+  position: absolute;
+  left: 95px;
+  top: 158px;
+}
+
+/* line 614, ../sass/screen.scss */
+.boots {
+  background-position: 0 -55px;
+  width: 93px;
+  height: 52px;
+  position: absolute;
+  top: 158px;
+  left: 112px;
+}
+
+/* line 622, ../sass/screen.scss */
+.clothes {
+  background-position: 0 -107px;
+  width: 69px;
+  height: 47px;
+  position: absolute;
+  top: 163px;
+  right: 145px;
+}
+
+/* line 631, ../sass/screen.scss */
+.heading-divider {
+  width: 84px;
+  height: 2px;
+}
+
+/* TAB2 */
+/* line 636, ../sass/screen.scss */
+.tab2 {
+  text-align: center;
+}
+/* line 638, ../sass/screen.scss */
+.tab2 h1 {
+  color: #3f5391;
+  margin: 57px 0 0 0;
+  line-height: 71px;
+}
+/* line 642, ../sass/screen.scss */
+.tab2 h1 span {
+  color: #ec6e5d;
+}
+/* line 646, ../sass/screen.scss */
+.tab2 .heading-divider {
+  background: #ededed;
+  margin: 22px auto 27px auto;
+}
+/* line 650, ../sass/screen.scss */
+.tab2 p {
+  margin-bottom: 15px;
+  font-size: 17px;
+  font-family: "LatoWeb";
+  line-height: 27px;
+}
+/* line 655, ../sass/screen.scss */
+.tab2 p .red {
+  color: #ec6e5d;
+  font-family: "LatoWebBold";
+}
+/* line 659, ../sass/screen.scss */
+.tab2 p .bold {
+  font-family: "LatoWebBold";
+  color: #343434;
+}
+/* line 663, ../sass/screen.scss */
+.tab2 p .normal {
+  font-family: "LatoWeb";
+  color: #949494;
+}
+
+/* ---------------- */
+@media only screen and (max-width: 1111px) {
+  /* line 671, ../sass/screen.scss */
+  .benefits {
+    margin-bottom: 109px !important;
+  }
+
+  /* line 674, ../sass/screen.scss */
+  .benefits li {
+    width: 321px !important;
+  }
+
+  /* line 677, ../sass/screen.scss */
+  .benefits li:last-child {
+    display: none !important;
+  }
+}
+/* tab3 */
+/* line 682, ../sass/screen.scss */
+.tab3-top {
+  background: url(../css/images/bg_white.png) repeat-x top center;
+  height: 23px;
+}
+
+/* line 686, ../sass/screen.scss */
+.tab3 {
+  position: relative;
+  background: url(../css/images/tab3.jpg) no-repeat center center;
+  min-height: 851px;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin: 50px 0 0 0;
+}
+/* line 692, ../sass/screen.scss */
+.tab3 .tab-inner-image {
+  margin: 0 25px;
+  position: relative;
+  top: -23px;
+  background: url(../css/images/tab3_img.jpg) no-repeat center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 851px;
+  z-index: 2;
+}
+/* line 701, ../sass/screen.scss */
+.tab3 .shadow {
+  position: absolute;
+  bottom: 0;
+  background: url(../css/images/tab3_shadow.png) no-repeat center bottom;
+  height: 82px;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 5px;
+  opacity: 0.7;
+}
+/* line 713, ../sass/screen.scss */
+.tab3 h1 {
+  color: #fff;
+  padding: 58px 0 12px 0;
+  line-height: 71px;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.27);
+}
+/* line 720, ../sass/screen.scss */
+.tab3 .benefits {
+  margin: 58px auto 0;
+  overflow: hidden;
+}
+/* line 723, ../sass/screen.scss */
+.tab3 .benefits li {
+  width: 275px;
+  display: inline-block;
+  height: 165px;
+}
+/* line 144, small_icons/*.png */
+.tab3 .benefits li .small_icons-sprite, .tab3 .benefits li .icon .icon1, .tab3 .benefits li .icon .icon2, .tab3 .benefits li .icon .icon3, .tab3 .benefits li .icon .icon4, .tab3 .benefits li .icon .icon5, .tab3 .benefits li .icon .icon6, .tab3 .benefits li .icon .icon7, .tab3 .benefits li .icon .icon8, .tab3 .benefits li .icon .icon9, .tab3 .benefits li .multiple-items .slick-prev, .multiple-items .tab3 .benefits li .slick-prev, .tab3 .benefits li .multiple-items .slick-next, .multiple-items .tab3 .benefits li .slick-next, .tab3 .benefits li .tab8 .slick-prev, .tab8 .tab3 .benefits li .slick-prev, .tab3 .benefits li .tab8 .slick-next, .tab8 .tab3 .benefits li .slick-next, .tab3 .benefits li .tab10 .slick-prev, .tab10 .tab3 .benefits li .slick-prev, .tab3 .benefits li .tab10 .slick-next, .tab10 .tab3 .benefits li .slick-next {
+  background-image: url('images/sprites/small_icons-scfb8a8cf5f.png');
+  background-repeat: no-repeat;
+}
+/* line 728, ../sass/screen.scss */
+.tab3 .benefits li:nth-child(1), .tab3 .benefits li:nth-child(4), .tab3 .benefits li:nth-child(7) {
+  width: 359px;
+}
+/* line 731, ../sass/screen.scss */
+.tab3 .benefits li:nth-child(2), .tab3 .benefits li:nth-child(5), .tab3 .benefits li:nth-child(8) {
+  width: 338px;
+}
+/* line 734, ../sass/screen.scss */
+.tab3 .benefits li:nth-child(4), .tab3 .benefits li:nth-child(5), .tab3 .benefits li:nth-child(6) {
+  height: 158px;
+}
+/* line 737, ../sass/screen.scss */
+.tab3 .benefits li .icon {
+  display: inline-block;
+  float: left;
+  width: 44px;
+  margin: 26px 0 0 0;
+  height: 150px;
+}
+/* line 743, ../sass/screen.scss */
+.tab3 .benefits li .icon .icon1 {
+  background-position: 0 0;
+  height: 32px;
+  width: 9px;
+  margin: 0 0 0 11px;
+}
+/* line 749, ../sass/screen.scss */
+.tab3 .benefits li .icon .icon2 {
+  background-position: 0 -32px;
+  height: 32px;
+  width: 31px;
+  margin: 0;
+}
+/* line 755, ../sass/screen.scss */
+.tab3 .benefits li .icon .icon3 {
+  background-position: 0 -64px;
+  width: 24px;
+  height: 32px;
+  margin: 0 0 0 6px;
+}
+/* line 761, ../sass/screen.scss */
+.tab3 .benefits li .icon .icon4 {
+  background-position: 0 -96px;
+  width: 28px;
+  height: 24px;
+  margin: 0 0 0 1px;
+}
+/* line 767, ../sass/screen.scss */
+.tab3 .benefits li .icon .icon5 {
+  background-position: 0 -120px;
+  width: 30px;
+  height: 26px;
+  margin: 0;
+}
+/* line 773, ../sass/screen.scss */
+.tab3 .benefits li .icon .icon6 {
+  background-position: 0 -146px;
+  width: 27px;
+  height: 32px;
+  margin: 0 0 0 3px;
+}
+/* line 780, ../sass/screen.scss */
+.tab3 .benefits li .icon .icon7 {
+  background-position: 0 -178px;
+  height: 32px;
+  width: 31px;
+  margin: 0 0 0 4px;
+}
+/* line 787, ../sass/screen.scss */
+.tab3 .benefits li .icon .icon8 {
+  background-position: 0 -210px;
+  height: 27px;
+  width: 24px;
+  margin: 2px 0 0 2px;
+}
+/* line 794, ../sass/screen.scss */
+.tab3 .benefits li .icon .icon9 {
+  background-position: 0 -237px;
+  height: 31px;
+  width: 25px;
+  margin: -1px 0 0 7px;
+}
+/* line 801, ../sass/screen.scss */
+.tab3 .benefits li .content {
+  position: relative;
+  float: left;
+  font-size: 17px;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.27);
+  line-height: 28px;
+  font-family: "LatoWebBold";
+}
+/* line 809, ../sass/screen.scss */
+.tab3 .benefits li .content:before {
+  content: "";
+  height: 3px;
+  width: 37px;
+  background: #fff;
+  margin: 0 0 17px 0;
+  display: block;
+}
+
+/* line 822, ../sass/screen.scss */
+.tab3-form {
+  margin-top: -197px !important;
+  z-index: 3;
+}
+/* line 825, ../sass/screen.scss */
+.tab3-form p {
+  font-size: 20px;
+  color: #343434 !important;
+  padding: 16px 0 0 0;
+  line-height: 27px;
+}
+/* line 831, ../sass/screen.scss */
+.tab3-form h2 {
+  padding: 22px 0 0 0 !important;
+}
+
+/* line 835, ../sass/screen.scss */
+.tab9-form {
+  margin-bottom: -159px !important;
+  margin-top: -60px !important;
+  z-index: 3;
+}
+/* line 839, ../sass/screen.scss */
+.tab9-form p {
+  font-size: 20px;
+  color: #343434 !important;
+  padding: 16px 0 0 0;
+  line-height: 27px;
+}
+/* line 845, ../sass/screen.scss */
+.tab9-form h2 {
+  padding: 22px 0 0 0 !important;
+}
+
+/* line 849, ../sass/screen.scss */
+.form-normalize {
+  z-index: 3;
+  background: url(../css/images/form_modal.png) no-repeat !important;
+  height: 264px !important;
+  margin: 0 0 0 -16px !important;
+}
+/* line 854, ../sass/screen.scss */
+.form-normalize p {
+  font-size: 20px;
+  color: #343434 !important;
+  padding: 16px 0 0 0;
+  line-height: 27px;
+}
+/* line 860, ../sass/screen.scss */
+.form-normalize h2 {
+  padding: 22px 0 0 0 !important;
+}
+
+/* line 864, ../sass/screen.scss */
+.form {
+  position: relative;
+  background: url(../css/images/form_bg.png) no-repeat;
+  height: 358px;
+  width: 920px;
+  padding: 48px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: -1px auto 0 auto;
+}
+/* line 873, ../sass/screen.scss */
+.form h2 {
+  color: #343434;
+  font-size: 30px;
+  font-family: "LatoWebLight";
+  text-align: center;
+  padding: 19px 0 0 0;
+  line-height: 37px;
+}
+/* line 881, ../sass/screen.scss */
+.form p {
+  color: #8b8b8b;
+  font-family: "LatoWeb";
+  text-align: center;
+  padding: 13px 0 0 0;
+}
+/* line 886, ../sass/screen.scss */
+.form p span {
+  color: #ec6f5d;
+}
+/* line 890, ../sass/screen.scss */
+.form form {
+  margin-top: 4px;
+}
+
+/* line 895, ../sass/screen.scss */
+.tab4 {
+  background: #f9f9f9;
+  margin-top: -358px;
+  padding-top: 358px;
+}
+/* line 899, ../sass/screen.scss */
+.tab4 h1 {
+  color: #3f5391;
+  padding: 10px 0 52px 0;
+  line-height: 71px;
+  text-align: center;
+}
+/* line 906, ../sass/screen.scss */
+.tab4 ul.first-row li {
+  float: left;
+  width: 468px;
+  text-align: center;
+}
+/* line 910, ../sass/screen.scss */
+.tab4 ul.first-row li:last-child {
+  margin: 0 0 0 24px;
+}
+/* line 914, ../sass/screen.scss */
+.tab4 ul.first-row li a.title {
+  color: #2b2b2b;
+  font-size: 20px;
+  font-family: "LatoWebMedium";
+}
+/* line 920, ../sass/screen.scss */
+.tab4 ul.first-row li .horizontal-divider {
+  background: #d9e2fe;
+  width: 352px;
+  height: 2px;
+  margin: 17px auto 23px;
+}
+/* line 926, ../sass/screen.scss */
+.tab4 ul.first-row li .block {
+  -webkit-box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.09);
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+/* line 937, ../sass/screen.scss */
+.tab4 ul.first-row li .content {
+  background: #f9dbde;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 15px 25px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 26px;
+  color: #2b2b2b;
+  font-size: 16px;
+  font-family: "LatoWebMedium";
+  margin: -3px 0 0 0;
+  min-height: 136px;
+}
+/* line 956, ../sass/screen.scss */
+.tab4 ul.first-row li .vertical-divider {
+  background: url(../css/images/vertical-line.png) no-repeat;
+  height: 23px;
+  width: 1px;
+  margin: -12px auto 0;
+}
+/* line 962, ../sass/screen.scss */
+.tab4 ul.first-row li .price {
+  color: #2b2b2b;
+  text-align: center;
+  font-size: 25px;
+  font-family: "LatoWebMedium";
+  margin: 25px 0 11px 0;
+}
+/* line 969, ../sass/screen.scss */
+.tab4 ul.first-row li .read-about {
+  background: url(../css/images/btn_left.png) no-repeat left 0, url(../css/images/btn_right.png) no-repeat right 0, #f3f3f3 url(../css/images/btn_center.png) repeat-x;
+  height: 47px;
+  width: 247px;
+  display: block;
+  text-align: center;
+  line-height: 47px;
+  color: #fff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: "BookmanOldStyle-Bold";
+  text-shadow: 0 1px #bc5e51;
+  margin: 0 auto;
+}
+/* line 984, ../sass/screen.scss */
+.tab4 ul.first-row li .read-about:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+/* line 991, ../sass/screen.scss */
+.tab4 .second-row {
+  padding: 64px 0 70px 0;
+}
+/* line 993, ../sass/screen.scss */
+.tab4 .second-row li {
+  width: 304px;
+  -webkit-box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.09);
+  height: 330px;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 24px 0 0;
+}
+/* line 1002, ../sass/screen.scss */
+.tab4 .second-row li:last-child {
+  margin: 0;
+}
+/* line 1005, ../sass/screen.scss */
+.tab4 .second-row li img {
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+/* line 1013, ../sass/screen.scss */
+.tab4 .second-row li .content {
+  background: #fff;
+  text-align: center;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 16px 24px;
+}
+/* line 1023, ../sass/screen.scss */
+.tab4 .second-row li .content .title {
+  font-size: 16px;
+  color: #484848;
+  font-family: LatoWebBold;
+}
+/* line 1028, ../sass/screen.scss */
+.tab4 .second-row li .content .horizontal-divider {
+  width: 188px;
+  height: 1px;
+  background: #e4e4e4;
+  margin: 16px auto 18px;
+}
+/* line 1035, ../sass/screen.scss */
+.tab4 .second-row li .content .read-podrobnee {
+  background: url(../css/images/btn_left.png) no-repeat left 0, url(../css/images/btn_right.png) no-repeat right 0, #f3f3f3 url(../css/images/btn_center.png) repeat-x;
+  height: 47px;
+  width: 166px;
+  display: block;
+  text-align: center;
+  line-height: 47px;
+  color: #fff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: "BookmanOldStyle-Bold";
+  text-shadow: 0 1px #bc5e51;
+  margin: 0 auto;
+}
+/* line 1050, ../sass/screen.scss */
+.tab4 .second-row li .content .read-podrobnee:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+/* line 1059, ../sass/screen.scss */
+.tab5-top {
+  background: #f9f9f9;
+  height: 23px;
+}
+
+/* line 1063, ../sass/screen.scss */
+.tab5 {
+  position: relative;
+  background: url(../css/images/tab3.jpg) no-repeat center center;
+  height: 647px;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 1068, ../sass/screen.scss */
+.tab5 .tab-inner-image {
+  margin: 0 25px;
+  position: relative;
+  top: -23px;
+  background: url(../css/images/tab6_bg.jpg) no-repeat center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 644px;
+  z-index: 2;
+}
+/* line 1077, ../sass/screen.scss */
+.tab5 .shadow {
+  position: absolute;
+  bottom: 0;
+  background: url(../css/images/tab3_shadow.png) no-repeat center bottom;
+  height: 82px;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 5px;
+  opacity: 0.7;
+}
+/* line 1089, ../sass/screen.scss */
+.tab5 h1 {
+  color: #3f5391;
+  padding: 58px 0 12px 0;
+  line-height: 71px;
+  text-align: center;
+}
+
+/* line 1096, ../sass/screen.scss */
+.multiple-items {
+  width: 796px;
+  margin: 0 auto;
+}
+/* line 1099, ../sass/screen.scss */
+.multiple-items .slick-slide {
+  width: 244px;
+}
+/* line 1102, ../sass/screen.scss */
+.multiple-items .item {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 16px;
+  -webkit-box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.09);
+}
+/* line 1108, ../sass/screen.scss */
+.multiple-items .item img {
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+/* line 1116, ../sass/screen.scss */
+.multiple-items .item .content {
+  background: #fff;
+  text-align: center;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 16px 24px;
+  width: 244px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 1128, ../sass/screen.scss */
+.multiple-items .item .content .title {
+  font-size: 20px;
+  color: #3f5391;
+  font-family: LatoWebHeavy;
+}
+/* line 1133, ../sass/screen.scss */
+.multiple-items .item .content .read-full {
+  background: url(../css/images/btn_left.png) no-repeat left 0, url(../css/images/btn_right.png) no-repeat right 0, #f3f3f3 url(../css/images/btn_center.png) repeat-x;
+  height: 47px;
+  width: 166px;
+  display: block;
+  text-align: center;
+  line-height: 47px;
+  color: #fff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: "BookmanOldStyle-Bold";
+  text-shadow: 0 1px #bc5e51;
+  margin: 17px auto 0;
+}
+/* line 1148, ../sass/screen.scss */
+.multiple-items .item .content .read-full:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+/* line 144, small_icons/*.png */
+.multiple-items .small_icons-sprite, .multiple-items .tab3 .benefits li .icon .icon1, .tab3 .benefits li .icon .multiple-items .icon1, .multiple-items .tab3 .benefits li .icon .icon2, .tab3 .benefits li .icon .multiple-items .icon2, .multiple-items .tab3 .benefits li .icon .icon3, .tab3 .benefits li .icon .multiple-items .icon3, .multiple-items .tab3 .benefits li .icon .icon4, .tab3 .benefits li .icon .multiple-items .icon4, .multiple-items .tab3 .benefits li .icon .icon5, .tab3 .benefits li .icon .multiple-items .icon5, .multiple-items .tab3 .benefits li .icon .icon6, .tab3 .benefits li .icon .multiple-items .icon6, .multiple-items .tab3 .benefits li .icon .icon7, .tab3 .benefits li .icon .multiple-items .icon7, .multiple-items .tab3 .benefits li .icon .icon8, .tab3 .benefits li .icon .multiple-items .icon8, .multiple-items .tab3 .benefits li .icon .icon9, .tab3 .benefits li .icon .multiple-items .icon9, .multiple-items .slick-prev, .multiple-items .slick-next {
+  background-image: url('images/sprites/small_icons-scfb8a8cf5f.png');
+  background-repeat: no-repeat;
+}
+/* line 1156, ../sass/screen.scss */
+.multiple-items .slick-prev {
+  background-position: 0 -364px;
+}
+/* line 1159, ../sass/screen.scss */
+.multiple-items .slick-next {
+  background-position: 0 -268px;
+}
+
+/* line 1163, ../sass/screen.scss */
+.tab6 {
+  padding: 0 0 83px 0;
+  /* icons */
+}
+/* line 1165, ../sass/screen.scss */
+.tab6 h1 {
+  color: #3f5391;
+  padding: 58px 0 12px 0;
+  line-height: 71px;
+  text-align: center;
+}
+/* line 1171, ../sass/screen.scss */
+.tab6 ul {
+  padding-top: 53px;
+}
+/* line 1174, ../sass/screen.scss */
+.tab6 li {
+  width: 50%;
+  float: left;
+}
+/* line 72, why_icons/*.png */
+.tab6 .why_icons-sprite, .tab6 .icon.icon1, .tab6 .icon.icon2, .tab6 .icon.icon3, .tab6 .icon.icon4 {
+  background-image: url('images/sprites/why_icons-s087c127c6b.png');
+  background-repeat: no-repeat;
+}
+/* line 1180, ../sass/screen.scss */
+.tab6 .icon {
+  margin: 0 auto 35px auto;
+}
+/* line 1182, ../sass/screen.scss */
+.tab6 .icon.icon1 {
+  background-position: 0 0;
+  width: 61px;
+  height: 61px;
+}
+/* line 1187, ../sass/screen.scss */
+.tab6 .icon.icon2 {
+  background-position: 0 -61px;
+  width: 45px;
+  height: 95px;
+  margin-top: 19px;
+}
+/* line 1193, ../sass/screen.scss */
+.tab6 .icon.icon3 {
+  background-position: 0 -156px;
+  width: 72px;
+  height: 61px;
+}
+/* line 1198, ../sass/screen.scss */
+.tab6 .icon.icon4 {
+  background-position: 0 -217px;
+  width: 33px;
+  height: 95px;
+  margin-top: 19px;
+}
+/* line 1205, ../sass/screen.scss */
+.tab6 .title {
+  font-family: "LatoWebHeavy";
+  color: #ed705e;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 17px;
+}
+/* line 1212, ../sass/screen.scss */
+.tab6 .content {
+  color: #7a7a7a;
+  font-size: 18px;
+  font-family: "LatoWeb";
+  line-height: 27px;
+  text-align: center;
+}
+
+/* line 1221, ../sass/screen.scss */
+.tab7 {
+  position: relative;
+  background: url(../css/images/tab7_bg.jpg) no-repeat center center;
+  height: 847px;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 1226, ../sass/screen.scss */
+.tab7 .tab-inner-image {
+  margin: 0 25px;
+  position: relative;
+  top: -23px;
+  background: url(../css/images/tab7_img.jpg) no-repeat center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 846px;
+  z-index: 2;
+}
+/* line 1235, ../sass/screen.scss */
+.tab7 .shadow {
+  position: absolute;
+  bottom: 0;
+  background: url(../css/images/tab3_shadow.png) no-repeat center bottom;
+  height: 82px;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 5px;
+  opacity: 0.7;
+}
+/* line 1247, ../sass/screen.scss */
+.tab7 h1 {
+  text-align: center;
+  color: #3f5391;
+  padding: 60px 0 0 0;
+  line-height: 71px;
+}
+/* line 1252, ../sass/screen.scss */
+.tab7 h1 span {
+  color: #ec6e5d;
+}
+/* line 1256, ../sass/screen.scss */
+.tab7 ul {
+  padding-top: 51px;
+}
+/* line 1259, ../sass/screen.scss */
+.tab7 li {
+  width: 304px;
+  display: block;
+  float: left;
+  text-align: center;
+}
+/* line 1265, ../sass/screen.scss */
+.tab7 li:first-child, .tab7 li:nth-child(2) {
+  margin: 0 24px 0 0;
+}
+/* line 1269, ../sass/screen.scss */
+.tab7 li a.title {
+  font-family: "LatoWebBold";
+  color: #ed705e;
+  font-size: 20px;
+  text-align: center;
+}
+/* line 1275, ../sass/screen.scss */
+.tab7 li .horizontal-divider {
+  margin: 18px auto;
+  height: 1px;
+  width: 118px;
+  background: #d2d2d2;
+}
+/* line 1281, ../sass/screen.scss */
+.tab7 li p {
+  font-size: 16px;
+  color: #636363 !important;
+  line-height: 25px;
+  text-align: center;
+  margin: 0 0 28px 0;
+}
+/* line 1287, ../sass/screen.scss */
+.tab7 li p span {
+  color: #151515;
+}
+/* line 1291, ../sass/screen.scss */
+.tab7 li .price {
+  padding: 18px 0 0 0;
+  text-align: center;
+  font-family: "LatoWebLight";
+  font-size: 35px;
+  color: #151515;
+}
+/* line 1297, ../sass/screen.scss */
+.tab7 li .price .valuta {
+  color: #636363;
+}
+/* line 1302, ../sass/screen.scss */
+.tab7 li .in-tariff {
+  color: #3f5391;
+  font-size: 18px;
+  font-family: "LatoWeb";
+  text-align: center;
+  display: inline-block;
+  background: url(../css/images/tarif_icon.png) no-repeat right center;
+  padding: 0 23px 0 0;
+  margin: 0 0 29px 0;
+  text-decoration: underline;
+}
+/* line 1313, ../sass/screen.scss */
+.tab7 li .make-order {
+  background: url(../css/images/btn.png) no-repeat left 0, url(../css/images/btn.png) no-repeat right -47px, #f3f3f3 url(../css/images/btn.png) repeat-x 0 -94px;
+  height: 47px;
+  width: 203px;
+  display: block;
+  text-align: center;
+  line-height: 47px;
+  color: #fff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: "BookmanOldStyle-Bold";
+  position: relative;
+  z-index: 3;
+  text-shadow: 0 1px #bc5e51;
+  margin: -26px auto 0;
+}
+/* line 1330, ../sass/screen.scss */
+.tab7 li .make-order:hover {
+  text-decoration: none;
+  background: url(../css/images/btnh.png) no-repeat left 0, url(../css/images/btnh.png) no-repeat right -47px, url(../css/images/btnh.png) repeat-x 0 -94px !important;
+}
+/* line 1337, ../sass/screen.scss */
+.tab7 li .block {
+  -webkit-box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 43px 0px rgba(0, 0, 0, 0.09);
+  background: #fff url(../css/images/tarif_bottom.png) no-repeat bottom center;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding-bottom: 14px;
+  padding-top: 22px;
+  position: relative;
+}
+/* line 1347, ../sass/screen.scss */
+.tab7 li .gray-bg {
+  margin-top: -3px;
+  background: #f3f3f3;
+}
+/* line 1351, ../sass/screen.scss */
+.tab7 li:nth-child(2) .block:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -9px;
+  left: -10px;
+  right: -10px;
+  bottom: -9px;
+  border-left: 10px solid #b4b7cd;
+  border-right: 10px solid #b4b7cd;
+  border-top: 14px solid #b4b7cd;
+  border-bottom: 14px solid #b4b7cd;
+  z-index: -1;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 1370, ../sass/screen.scss */
+.important {
+  color: #f47b6a;
+}
+
+/* line 1373, ../sass/screen.scss */
+.tab8 {
+  padding: 0 0 83px 0;
+}
+/* line 1375, ../sass/screen.scss */
+.tab8 h1 {
+  color: #3f5391;
+  padding: 58px 0 12px 0;
+  line-height: 71px;
+  text-align: center;
+}
+/* line 1381, ../sass/screen.scss */
+.tab8 ul {
+  padding-top: 53px;
+}
+/* line 144, small_icons/*.png */
+.tab8 .small_icons-sprite, .tab8 .tab3 .benefits li .icon .icon1, .tab3 .benefits li .icon .tab8 .icon1, .tab8 .tab3 .benefits li .icon .icon2, .tab3 .benefits li .icon .tab8 .icon2, .tab8 .tab3 .benefits li .icon .icon3, .tab3 .benefits li .icon .tab8 .icon3, .tab8 .tab3 .benefits li .icon .icon4, .tab3 .benefits li .icon .tab8 .icon4, .tab8 .tab3 .benefits li .icon .icon5, .tab3 .benefits li .icon .tab8 .icon5, .tab8 .tab3 .benefits li .icon .icon6, .tab3 .benefits li .icon .tab8 .icon6, .tab8 .tab3 .benefits li .icon .icon7, .tab3 .benefits li .icon .tab8 .icon7, .tab8 .tab3 .benefits li .icon .icon8, .tab3 .benefits li .icon .tab8 .icon8, .tab8 .tab3 .benefits li .icon .icon9, .tab3 .benefits li .icon .tab8 .icon9, .tab8 .slick-prev, .tab8 .slick-next {
+  background-image: url('images/sprites/small_icons-scfb8a8cf5f.png');
+  background-repeat: no-repeat;
+}
+/* line 1385, ../sass/screen.scss */
+.tab8 .slick-prev {
+  background-position: 0 -412px;
+}
+/* line 1388, ../sass/screen.scss */
+.tab8 .slick-next {
+  background-position: 0 -316px;
+}
+/* line 1391, ../sass/screen.scss */
+.tab8 .gb_container {
+  width: 844px !important;
+  margin: 55px auto 0 auto;
+}
+/* line 1394, ../sass/screen.scss */
+.tab8 .gb_container .slick-slide {
+  width: 844px;
+  margin: 0 auto;
+}
+/* line 1403, ../sass/screen.scss */
+.tab8 .gb_container .gb_item .top-panel .ava {
+  margin: 0 auto;
+  background: url(../css/images/ava_bg.png) no-repeat;
+  height: 89px;
+  width: 89px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 7px 0 0 7px;
+}
+/* line 1410, ../sass/screen.scss */
+.tab8 .gb_container .gb_item .top-panel .ava img {
+  width: 75px;
+  height: 75px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 1417, ../sass/screen.scss */
+.tab8 .gb_container .gb_item .top-panel .title {
+  font-size: 20px;
+  color: #3c3747;
+  font-family: "LatoWeb";
+  padding: 13px 0 21px 0;
+  text-align: center;
+}
+/* line 1425, ../sass/screen.scss */
+.tab8 .gb_container .gb_item .top-panel .vertical-divider {
+  width: 1px;
+  height: 29px;
+  background: #cecece;
+  margin: 0 auto 22px;
+}
+/* line 1432, ../sass/screen.scss */
+.tab8 .gb_container .gb_item .top-panel p {
+  font-size: 17px;
+  color: #6f6f6f !important;
+  line-height: 29px;
+  text-align: center;
+}
+/* line 1442, ../sass/screen.scss */
+.tab8 .slick-list {
+  height: 318px;
+}
+/* line 1445, ../sass/screen.scss */
+.tab8 .slick-dots {
+  background: url(../css/images/vertical_slider_b.png) no-repeat center top;
+  padding-top: 56px;
+}
+/* line 1449, ../sass/screen.scss */
+.tab8 .slick-dots .dot-item img {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+/* line 1455, ../sass/screen.scss */
+.tab8 .slick-dots li {
+  background: url(../css/images/dot_li.png) no-repeat;
+  height: 90px;
+  width: 90px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 0 0 0;
+  margin: 0;
+}
+/* line 1463, ../sass/screen.scss */
+.tab8 .slick-dots li.slick-active {
+  background: url(../css/images/dot_li_active.png) no-repeat;
+}
+
+/* line 1469, ../sass/screen.scss */
+.tab9 {
+  position: relative;
+  background: url(../css/images/tab9_bg.jpg) no-repeat center center;
+  height: 1038px;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 1474, ../sass/screen.scss */
+.tab9 .tab-inner-image {
+  margin: 0 25px;
+  position: relative;
+  top: -23px;
+  background: url(../css/images/tab9_img.jpg) no-repeat center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 1038px;
+  z-index: 2;
+}
+/* line 1483, ../sass/screen.scss */
+.tab9 .shadow {
+  position: absolute;
+  bottom: 0;
+  background: url(../css/images/tab3_shadow.png) no-repeat center bottom;
+  height: 82px;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 5px;
+  opacity: 0.7;
+}
+/* line 1495, ../sass/screen.scss */
+.tab9 h1 {
+  color: #3f5391;
+  padding: 206px 0 0 0;
+  line-height: 71px;
+  text-align: center;
+}
+/* line 1501, ../sass/screen.scss */
+.tab9 .steps {
+  background: url(../css/images/steps.png) no-repeat;
+  height: 630px;
+  width: 961px;
+  margin: 86px auto 0;
+  overflow: hidden;
+  position: relative;
+}
+/* line 1509, ../sass/screen.scss */
+.tab9 .steps div {
+  width: 222px;
+  position: absolute;
+  text-align: center;
+  color: #3f5391;
+  font-size: 17px;
+  line-height: 24px;
+}
+/* line 1517, ../sass/screen.scss */
+.tab9 .steps .step1 {
+  top: 75px;
+  left: 75px;
+}
+/* line 1521, ../sass/screen.scss */
+.tab9 .steps .step2 {
+  top: 75px;
+  left: 370px;
+}
+/* line 1525, ../sass/screen.scss */
+.tab9 .steps .step3 {
+  top: 88px;
+  left: 665px;
+}
+/* line 1529, ../sass/screen.scss */
+.tab9 .steps .step4 {
+  top: 362px;
+  left: 70px;
+}
+/* line 1533, ../sass/screen.scss */
+.tab9 .steps .step5 {
+  top: 376px;
+  left: 367px;
+}
+/* line 1537, ../sass/screen.scss */
+.tab9 .steps .step6 {
+  top: 376px;
+  left: 666px;
+}
+/* line 1541, ../sass/screen.scss */
+.tab9 .steps .step_description {
+  width: 492px;
+  height: 78px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px 0 0 0;
+}
+
+/* line 1553, ../sass/screen.scss */
+.tab10 {
+  position: relative;
+  background: url(../css/images/faq_bg.jpg) no-repeat center center;
+  height: 543px;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding: 0 0 73px 0;
+}
+/* line 1559, ../sass/screen.scss */
+.tab10 h1 {
+  color: #3f5391;
+  padding: 68px 0 12px 0;
+  line-height: 71px;
+  text-align: center;
+}
+/* line 144, small_icons/*.png */
+.tab10 .small_icons-sprite, .tab10 .tab3 .benefits li .icon .icon1, .tab3 .benefits li .icon .tab10 .icon1, .tab10 .tab3 .benefits li .icon .icon2, .tab3 .benefits li .icon .tab10 .icon2, .tab10 .tab3 .benefits li .icon .icon3, .tab3 .benefits li .icon .tab10 .icon3, .tab10 .tab3 .benefits li .icon .icon4, .tab3 .benefits li .icon .tab10 .icon4, .tab10 .tab3 .benefits li .icon .icon5, .tab3 .benefits li .icon .tab10 .icon5, .tab10 .tab3 .benefits li .icon .icon6, .tab3 .benefits li .icon .tab10 .icon6, .tab10 .tab3 .benefits li .icon .icon7, .tab3 .benefits li .icon .tab10 .icon7, .tab10 .tab3 .benefits li .icon .icon8, .tab3 .benefits li .icon .tab10 .icon8, .tab10 .tab3 .benefits li .icon .icon9, .tab3 .benefits li .icon .tab10 .icon9, .tab10 .slick-prev, .tab10 .slick-next {
+  background-image: url('images/sprites/small_icons-scfb8a8cf5f.png');
+  background-repeat: no-repeat;
+}
+/* line 1567, ../sass/screen.scss */
+.tab10 .slick-prev {
+  background-position: 0 -412px;
+  top: 113px;
+}
+/* line 1571, ../sass/screen.scss */
+.tab10 .slick-next {
+  background-position: 0 -316px;
+  top: 113px;
+}
+/* line 1575, ../sass/screen.scss */
+.tab10 .faq_container {
+  width: 844px !important;
+  margin: 55px auto 0 auto;
+}
+/* line 1578, ../sass/screen.scss */
+.tab10 .faq_container .slick-slide {
+  width: 844px;
+  margin: 0 auto;
+}
+/* line 1585, ../sass/screen.scss */
+.tab10 .faq_container .faq_item .heading {
+  font-size: 20px;
+  color: #3c3747;
+  font-family: "LatoWeb";
+  padding: 13px 0 21px 0;
+  text-align: center;
+}
+/* line 1593, ../sass/screen.scss */
+.tab10 .faq_container .faq_item .vertical-divider {
+  width: 1px;
+  height: 29px;
+  background: #cecece;
+  margin: 0 auto 22px;
+}
+/* line 1600, ../sass/screen.scss */
+.tab10 .faq_container .faq_item p {
+  font-size: 17px;
+  color: #6f6f6f !important;
+  line-height: 29px;
+  text-align: center;
+}
+/* line 1608, ../sass/screen.scss */
+.tab10 .slick-list {
+  height: 170px;
+}
+/* line 1611, ../sass/screen.scss */
+.tab10 .slick-dots {
+  background: url(../css/images/vertical_slider_b.png) no-repeat center top;
+  padding-top: 56px;
+}
+/* line 1615, ../sass/screen.scss */
+.tab10 .slick-dots .dot-item img {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+/* line 1621, ../sass/screen.scss */
+.tab10 .slick-dots li {
+  background: url(../css/images/dot_li.png) no-repeat;
+  height: 90px;
+  width: 90px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 21px 0 0 0;
+  margin: 0;
+  color: #3c3747;
+  font-size: 20px;
+  line-height: 50px;
+}
+/* line 1633, ../sass/screen.scss */
+.tab10 .slick-dots li.slick-active {
+  background: url(../css/images/dot_li_active.png) no-repeat;
+}
+
+/* line 1639, ../sass/screen.scss */
+.tab11 {
+  position: relative;
+  background: #dbd2d9;
+  min-height: 624px;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 1644, ../sass/screen.scss */
+.tab11 .tab-inner-image {
+  margin: 0 25px;
+  position: relative;
+  top: -23px;
+  background: url(../css/images/tab11_img.jpg) no-repeat center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 624px;
+  z-index: 2;
+}
+/* line 1653, ../sass/screen.scss */
+.tab11 .shadow {
+  position: absolute;
+  bottom: 0;
+  background: url(../css/images/tab3_shadow.png) no-repeat center bottom;
+  height: 82px;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 5px;
+  opacity: 0.7;
+}
+/* line 1665, ../sass/screen.scss */
+.tab11 h1 {
+  color: #fff;
+  padding: 70px 0 0 12px;
+  line-height: 71px;
+  text-align: center;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.21);
+}
+/* line 1673, ../sass/screen.scss */
+.tab11 .content {
+  position: relative;
+  padding: 26px 0 0 0;
+}
+/* line 1677, ../sass/screen.scss */
+.tab11 .content .left {
+  float: left;
+  width: 312px;
+}
+/* line 1681, ../sass/screen.scss */
+.tab11 .content .left .ava {
+  background: url(../css/images/bigava.png) no-repeat;
+  height: 283px;
+  width: 312px;
+  margin: 0 0 0 -43px;
+}
+/* line 1687, ../sass/screen.scss */
+.tab11 .content .left .title {
+  color: #fff;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.21);
+  font-family: "LatoWebHeavy";
+  font-size: 23px;
+}
+/* line 1693, ../sass/screen.scss */
+.tab11 .content .left .description {
+  color: #fff;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.21);
+  font-family: "LatoWebHeavy";
+  font-size: 16px;
+  margin: 11px 0 0 0;
+}
+/* line 1701, ../sass/screen.scss */
+.tab11 .content .right {
+  margin: 73px 0 0 312px;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.21);
+  font-family: "LatoWeb";
+  font-size: 18px;
+  line-height: 29px;
+  color: #fff;
+  position: relative;
+  height: 379px;
+  overflow: hidden;
+}
+/* line 1713, ../sass/screen.scss */
+.tab11 .content .glass {
+  background: url(../css/images/glass.png) no-repeat;
+  height: 312px;
+  width: 697px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/* line 1721, ../sass/screen.scss */
+.tab11 .content .readfull {
+  background: url(../css/images/readmore.png) no-repeat;
+  height: 33px;
+  width: 141px;
+  position: absolute;
+  right: 0;
+  bottom: 70px;
+}
+/* line 1728, ../sass/screen.scss */
+.tab11 .content .readfull:hover {
+  opacity: 0.7;
+}
+/* line 1732, ../sass/screen.scss */
+.tab11 .content .hide_me {
+  background: url(../css/images/hide_me.png) no-repeat !important;
+  height: 33px;
+  width: 141px;
+  position: absolute;
+  right: 0;
+  bottom: 28px;
+}
+/* line 1739, ../sass/screen.scss */
+.tab11 .content .hide_me:hover {
+  opacity: 0.7;
+}
+
+/* line 1746, ../sass/screen.scss */
+.footer header {
+  border-top: 3px solid #f47b6a;
+}
+
+/* line 1750, ../sass/screen.scss */
+.modal-cont {
+  position: relative;
+}
+
+/* line 1753, ../sass/screen.scss */
+.modal-cont form {
+  padding: 0 !important;
+}
+
+/* line 1756, ../sass/screen.scss */
+.modal-cont h1 {
+  font-family: "LatoWebLight";
+  color: #343434;
+  font-size: 30px;
+  text-align: center;
+  text-transform: none;
+  padding-bottom: 26px;
+  padding-left: 10px;
+}
+
+/* line 1766, ../sass/screen.scss */
+.result_heading {
+  font-family: "LatoWebLight";
+  color: #343434;
+  font-size: 30px;
+  text-align: center;
+  text-transform: none;
+  padding-bottom: 26px;
+  padding-left: 14px;
+  padding-top: 11px;
+}
+
+/* line 1777, ../sass/screen.scss */
+.result_content {
+  font-family: "LatoWebLight";
+  color: #343434;
+  font-size: 16px;
+  text-align: center;
+  text-transform: none;
+  padding-bottom: 26px;
+  /* padding-left: 10px; */
+}
+
+/* line 1786, ../sass/screen.scss */
+#feedback-modal-box {
+  background: url(../css/images/modal-success.png) no-repeat;
+  height: 196px;
+  width: 390px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* line 1793, ../sass/screen.scss */
+.close {
+  background: url(../css/images/modal_close.png) no-repeat;
+  height: 9px;
+  width: 9px;
+  position: absolute;
+  top: -10px;
+  right: -37px;
+}
+/* line 1800, ../sass/screen.scss */
+.close:hover {
+  opacity: 0.6;
+}
+
+/* line 1804, ../sass/screen.scss */
+.descr_modal {
+  position: relative;
+  width: 888px;
+}
+/* line 1807, ../sass/screen.scss */
+.descr_modal .close {
+  top: 14px;
+  right: 14px;
+}
+/* line 1811, ../sass/screen.scss */
+.descr_modal .descr_modal_t {
+  background: url(../css/images/modal_top.png) no-repeat;
+  height: 14px;
+  width: 888px;
+  overflow: hidden;
+}
+/* line 1817, ../sass/screen.scss */
+.descr_modal .descr_modal_c {
+  overflow: hidden;
+  background: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 46px;
+}
+/* line 1823, ../sass/screen.scss */
+.descr_modal .descr_modal_c img {
+  margin: 0 -46px 38px -46px;
+}
+/* line 1827, ../sass/screen.scss */
+.descr_modal .descr_modal_c .title {
+  text-align: center;
+  color: #2b2b2b;
+  font-size: 20px;
+  font-family: "LatoWebMedium";
+  padding: 30px 0 15px 0;
+}
+/* line 1834, ../sass/screen.scss */
+.descr_modal .descr_modal_c .divider {
+  background: #d9e2fe;
+  height: 2px;
+  width: 352px;
+  margin: 0 auto 41px;
+}
+/* line 1840, ../sass/screen.scss */
+.descr_modal .descr_modal_c p {
+  font-size: 16px;
+  font-family: "LatoWebMedium";
+  line-height: 28px;
+  color: #565656;
+  text-align: center;
+  margin-bottom: 38px;
+}
+/* line 1848, ../sass/screen.scss */
+.descr_modal .descr_modal_c p .bold {
+  color: #000 !important;
+  font-family: "LatoWebBold";
+}
+/* line 1852, ../sass/screen.scss */
+.descr_modal .descr_modal_c p .bolder {
+  color: #000 !important;
+  font-family: "LatoWebMedium";
+}
+/* line 1856, ../sass/screen.scss */
+.descr_modal .descr_modal_c p .important {
+  color: #f47b6a;
+}
+/* line 1859, ../sass/screen.scss */
+.descr_modal .descr_modal_c p:last-child {
+  margin: 0;
+}
+/* line 1864, ../sass/screen.scss */
+.descr_modal .descr_modal_b {
+  background: url(../css/images/modal_bottom.png) no-repeat;
+  height: 230px;
+  width: 888px;
+  overflow: hidden;
+}
+
+/* line 1873, ../sass/screen.scss */
+.descr_modal2 {
+  position: relative;
+  width: 591px;
+}
+/* line 1876, ../sass/screen.scss */
+.descr_modal2 .close {
+  top: 28px;
+  right: 14px;
+}
+/* line 1880, ../sass/screen.scss */
+.descr_modal2 .descr_modal2_t {
+  background: url(../css/images/modal_tar_t.png) no-repeat;
+  height: 32px;
+  width: 591px;
+  overflow: hidden;
+}
+/* line 1886, ../sass/screen.scss */
+.descr_modal2 .descr_modal2_c {
+  overflow: hidden;
+  background: url(../css/images/modal_tar_c.png) repeat-y;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 46px;
+}
+/* line 1892, ../sass/screen.scss */
+.descr_modal2 .descr_modal2_c img {
+  margin: 0 -46px 38px -46px;
+}
+/* line 1896, ../sass/screen.scss */
+.descr_modal2 .descr_modal2_c .title {
+  text-align: left;
+  color: #343434;
+  font-size: 25px;
+  font-family: "LatoWebLight";
+  padding: 30px 0 15px 0;
+}
+/* line 1903, ../sass/screen.scss */
+.descr_modal2 .descr_modal2_c .divider {
+  background: #d9e2fe;
+  height: 2px;
+  width: 479px;
+  margin: 0 0 30px 0;
+}
+/* line 1909, ../sass/screen.scss */
+.descr_modal2 .descr_modal2_c p {
+  font-size: 16px;
+  font-family: "LatoWebMedium";
+  line-height: 28px;
+  color: #565656;
+  text-align: center;
+  margin-bottom: 38px;
+}
+/* line 1917, ../sass/screen.scss */
+.descr_modal2 .descr_modal2_c p .bold {
+  color: #000 !important;
+  font-family: "LatoWebBold";
+}
+/* line 1921, ../sass/screen.scss */
+.descr_modal2 .descr_modal2_c p .bolder {
+  color: #000 !important;
+  font-family: "LatoWebMedium";
+}
+/* line 1925, ../sass/screen.scss */
+.descr_modal2 .descr_modal2_c p .important {
+  color: #f47b6a;
+}
+/* line 1928, ../sass/screen.scss */
+.descr_modal2 .descr_modal2_c p:last-child {
+  margin: 0;
+}
+/* line 1932, ../sass/screen.scss */
+.descr_modal2 .descr_modal2_c ul {
+  padding-bottom: 20px;
+}
+/* line 1935, ../sass/screen.scss */
+.descr_modal2 .descr_modal2_c li {
+  display: block;
+  font-size: 17px;
+  color: #343434;
+  line-height: 37px;
+  background: url(../css/images/modal_li.png) no-repeat left 18px;
+  padding: 0 0 0 35px;
+}
+/* line 1944, ../sass/screen.scss */
+.descr_modal2 .descr_modal2_b {
+  background: url(../css/images/modal_tar_b.png) no-repeat;
+  height: 26px;
+  width: 591px;
+  overflow: hidden;
+}
